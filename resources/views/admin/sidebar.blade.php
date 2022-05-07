@@ -11,78 +11,29 @@
                   <p class="profile-name">John Doe</p>
                   <p class="designation">Admin</p>
                 </div>
-                <div class="icon-container">
-                  <i class="icon-bubbles"></i>
-                  <div class="dot-indicator bg-danger"></div>
-                </div>
               </a>
             </li>
             <li class="nav-item nav-category">
-              <span class="nav-link">Dashboard</span>
+              <span class="nav-link"><span style="color:#007BFF;">Doctors</span></span>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url('add_doctor_view');}}">
+                <span class="menu-title">Add Doctor</span>
+                <i class="icon-doc  menu-icon"></i>
+              </a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="index.html">
-                <span class="menu-title">Dashboard</span>
-                <i class="icon-screen-desktop menu-icon"></i>
-              </a>
-            </li>
-            <li class="nav-item nav-category"><span class="nav-link">UI Elements</span></li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-                <span class="menu-title">Basic UI Elements</span>
+                <span class="menu-title">All Doctors</span>
                 <i class="icon-layers menu-icon"></i>
               </a>
-              <div class="collapse" id="ui-basic">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="admin/pages/ui-features/buttons.html">Buttons</a></li>
-                  <li class="nav-item"> <a class="nav-link" href="admin/pages/ui-features/typography.html">Typography</a></li>
-                </ul>
-              </div>
             </li>
+            <li class="nav-item nav-category"><span class="nav-link"><span style="color:#007BFF;">Appointments</span></span></li>
             <li class="nav-item">
-              <a class="nav-link" href="admin/pages/icons/simple-line-icons.html">
-                <span class="menu-title">Icons</span>
-                <i class="icon-globe menu-icon"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="admin/pages/forms/basic_elements.html">
-                <span class="menu-title">Form Elements</span>
+              <a class="nav-link" href="index.html">
+                <span class="menu-title">Appointment list</span>
                 <i class="icon-book-open menu-icon"></i>
               </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="admin/pages/charts/chartist.html">
-                <span class="menu-title">Charts</span>
-                <i class="icon-chart menu-icon"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="admin/pages/tables/basic-table.html">
-                <span class="menu-title">Tables</span>
-                <i class="icon-grid menu-icon"></i>
-              </a>
-            </li>
-            <li class="nav-item nav-category"><span class="nav-link">Sample admin/Pages</span></li>
-            <li class="nav-item">
-              <a class="nav-link" data-toggle="collapse" href="#auth" aria-expanded="false" aria-controls="auth">
-                <span class="menu-title">General admin/Pages</span>
-                <i class="icon-doc menu-icon"></i>
-              </a>
-              <div class="collapse" id="auth">
-                <ul class="nav flex-column sub-menu">
-                  <li class="nav-item"> <a class="nav-link" href="admin/pages/samples/login.html"> Login </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="admin/pages/samples/register.html"> Register </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="admin/pages/samples/error-404.html"> 404 </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="admin/pages/samples/error-500.html"> 500 </a></li>
-                  <li class="nav-item"> <a class="nav-link" href="admin/pages/samples/blank-page.html"> Blank Page </a></li>
-                </ul>
-              </div>
-            </li>
-            <li class="nav-item pro-upgrade">
-              <span class="nav-link">
-                <a class="btn btn-block px-0 btn-rounded btn-upgrade" href="https://www.bootstrapdash.com/product/stellar-admin-template/" target="_blank"> <i class="icon-badge mx-2"></i> Upgrade to Pro</a>
-              </span>
             </li>
           </ul>
         </nav>

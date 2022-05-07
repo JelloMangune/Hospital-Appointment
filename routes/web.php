@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomePageController;
-
+use App\Http\Controllers\AdminPageController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -27,3 +27,6 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/add_doctor_view',[AdminPageController::class,'plusview']);
+Route::post('/doctor_uploaded',[AdminPageController::class,'doctorUpload']);

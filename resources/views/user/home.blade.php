@@ -8,7 +8,7 @@
 
   <meta name="copyright" content="MACode ID, https://macodeid.com/">
 
-  <title>One Health - Medical Center HTML5 Template</title>
+  <title>MedAssis Home Page</title>
 
   <link rel="stylesheet" href="../assets/css/maicons.css">
 
@@ -19,6 +19,8 @@
   <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
 
   <link rel="stylesheet" href="../assets/css/theme.css">
+
+  <link rel="shortcut icon" href="admin/images/favicon.png" />
 </head>
 <body>
 
@@ -90,7 +92,6 @@
             </x-app-layout>
 
             @else
-            
             <li class="nav-item">
               <a class="btn btn-primary ml-lg-3" href="{{route('login');}}">Login</a>
             </li>
