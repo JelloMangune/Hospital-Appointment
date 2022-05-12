@@ -1,7 +1,8 @@
+<link rel="stylesheet" href="../assets/css/bootstrap.css">
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+        <img src="admin/images/med_assis_logo.png" alt="logo" style="width:250px;height:100px;"class="logo-dark" />
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -19,12 +20,12 @@
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required />
             </div>
 
-            <div>
+            <div class="mt-4">
                 <x-jet-label for="phone" value="{{ __('Phone') }}" />
                 <x-jet-input id="phone" class="block mt-1 w-full" type="text" name="phone" :value="old('phone')" required autofocus autocomplete="phone" />
             </div>
 
-            <div>
+            <div class="mt-4">
                 <x-jet-label for="address" value="{{ __('Address') }}" />
                 <x-jet-input id="address" class="block mt-1 w-full" type="text" name="address" :value="old('address')" required autofocus autocomplete="address" />
             </div>
@@ -57,10 +58,10 @@
             @endif
 
             <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}">
+                <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}" style="margin-right:80px;">
                     {{ __('Already registered?') }}
                 </a>
-
+                <a class="btn btn-secondary btn-sm" href="{{url('/');}}" style="margin-right:-10px;">cancel</a>
                 <x-jet-button class="ml-4">
                     {{ __('Register') }}
                 </x-jet-button>

@@ -1,7 +1,9 @@
+
+<link rel="stylesheet" href="../assets/css/bootstrap.css">
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+            <img src="admin/images/med_assis_logo.png" alt="logo" style="width:350px;height:150px;"class="logo-dark" />
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -34,11 +36,11 @@
 
             <div class="flex items-center justify-end mt-4">
                 @if (Route::has('password.request'))
-                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}">
+                    <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('password.request') }}" style="margin-right:20px;">
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
-
+                <a class="btn btn-secondary btn-sm" href="{{url('/');}}" style="margin-right:-10px;">cancel</a>
                 <x-jet-button class="ml-4">
                     {{ __('Log in') }}
                 </x-jet-button>

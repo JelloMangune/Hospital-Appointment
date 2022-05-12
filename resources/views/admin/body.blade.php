@@ -214,10 +214,10 @@
                         <tbody>
                           <tr>
                             <td>
-                              <img class="img-sm rounded-circle" src="images/faces/face1.jpg" alt="profile image"> Katie Holmes
+                              <img class="img-sm rounded-circle" src="admin/images/faces/face1.jpg" alt="profile image"> Katie Holmes
                             </td>
                             <td>$3621</td>
-                            <td><img src="images/dashboard/alipay.png" alt="alipay" class="gateway-icon mr-2"> alipay</td>
+                            <td><img src="admin/images/dashboard/alipay.png" alt="alipay" class="gateway-icon mr-2"> alipay</td>
                             <td>04 Jun 2019</td>
                             <td>18 Jul 2019</td>
                             <td>
@@ -226,10 +226,10 @@
                           </tr>
                           <tr>
                             <td>
-                              <img class="img-sm rounded-circle" src="images/faces/face2.jpg" alt="profile image"> Minnie Copeland
+                              <img class="img-sm rounded-circle" src="admin/images/faces/face2.jpg" alt="profile image"> Minnie Copeland
                             </td>
                             <td>$6245</td>
-                            <td><img src="images/dashboard/paypal.png" alt="alipay" class="gateway-icon mr-2"> Paypal</td>
+                            <td><img src="admin/images/dashboard/paypal.png" alt="alipay" class="gateway-icon mr-2"> Paypal</td>
                             <td>25 Sep 2019</td>
                             <td>07 Oct 2019</td>
                             <td>
@@ -238,10 +238,10 @@
                           </tr>
                           <tr>
                             <td>
-                              <img class="img-sm rounded-circle" src="images/faces/face3.jpg" alt="profile image"> Rodney Sims
+                              <img class="img-sm rounded-circle" src="admin/images/faces/face3.jpg" alt="profile image"> Rodney Sims
                             </td>
                             <td>$9265</td>
-                            <td><img src="images/dashboard/alipay.png" alt="alipay" class="gateway-icon mr-2"> alipay</td>
+                            <td><img src="admin/images/dashboard/alipay.png" alt="alipay" class="gateway-icon mr-2"> alipay</td>
                             <td>12 dec 2019</td>
                             <td>26 Aug 2019</td>
                             <td>
@@ -250,10 +250,10 @@
                           </tr>
                           <tr>
                             <td>
-                              <img class="img-sm rounded-circle" src="images/faces/face4.jpg" alt="profile image"> Carolyn Barker
+                              <img class="img-sm rounded-circle" src="admin/images/faces/face4.jpg" alt="profile image"> Carolyn Barker
                             </td>
                             <td>$2263</td>
-                            <td><img src="images/dashboard/alipay.png" alt="alipay" class="gateway-icon mr-2"> alipay</td>
+                            <td><img src="admin/images/dashboard/alipay.png" alt="alipay" class="gateway-icon mr-2"> alipay</td>
                             <td>30 Sep 2019</td>
                             <td>20 Oct 2019</td>
                             <td>

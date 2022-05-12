@@ -20,9 +20,10 @@
 
   <link rel="stylesheet" href="../assets/css/theme.css">
 
-  <link rel="shortcut icon" href="admin/images/favicon.png" />
+  <link rel="shortcut icon" href="admin/images/PIN.png" />
 </head>
 <body>
+
 
   <!-- Back to top button -->
   <div class="back-to-top"></div>
@@ -35,20 +36,24 @@
             <div class="site-info">
               <a href="#"><span class="mai-call text-primary"></span> +00 123 4455 6666</a>
               <span class="divider">|</span>
-              <a href="#"><span class="mai-mail text-primary"></span> mail@example.com</a>
+              <a href="https://accounts.google.com/signin/v2/identifier?flowName=GlifWebSignIn&flowEntry=ServiceLogin"><span class="mai-mail text-primary"></span>medassistancebooking@gmail.com</a>
             </div>
           </div>
           <div class="col-sm-4 text-right text-sm">
             <div class="social-mini-button">
-              <a href="#"><span class="mai-logo-facebook-f"></span></a>
+              <a href="https://www.facebook.com/Med-Assis-110405315002836"><span class="mai-logo-facebook-f"></span></a>
               <a href="#"><span class="mai-logo-twitter"></span></a>
-              <a href="#"><span class="mai-logo-dribbble"></span></a>
               <a href="#"><span class="mai-logo-instagram"></span></a>
             </div>
           </div>
         </div> <!-- .row -->
       </div> <!-- .container -->
     </div> <!-- .topbar -->
+
+    <div class="alert alert-danger" style="text-align:center">
+            <button type="button" class="close" data-dismiss="alert">X</button>
+            This page is only dedicated for academic purposes. The appointments and the doctors are not real.
+        </div>
 
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
       <div class="container">
