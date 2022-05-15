@@ -1,9 +1,10 @@
 
 <link rel="stylesheet" href="../assets/css/bootstrap.css">
+<link href='https://fonts.googleapis.com/css?family=Inria Serif' rel='stylesheet'>
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <img src="admin/images/med_assis_logo.png" alt="logo" style="width:350px;height:150px;"class="logo-dark" />
+            <img src="admin/images/med_assis_logo.png" alt="logo" style="width:350px;height:220px;"class="logo-dark" />
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />
@@ -15,8 +16,8 @@
         @endif
 
         <form method="POST" action="{{ route('login') }}">
+        <h1 style="text-align:center;font-family:Inria Serif;font-size:30px;"><b>Sign In</b></h1>
             @csrf
-
             <div>
                 <x-jet-label for="email" value="{{ __('Email') }}" />
                 <x-jet-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />

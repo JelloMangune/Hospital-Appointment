@@ -9,16 +9,16 @@
 
 :root {
   --primary: #3498DB;
-  --accent: #FF3D85;
-  --secondary: #4E5AFE;
+  --accent: #597884;
+  --secondary: #9eb9b3;
   --warning: #EED818;
   --info: #05B4E1;
   --danger: #FF4943;
   --success: #96C93D;
-  --dark: #343531;
+  --dark: #294552;
   --light: #F5F9F6;
   --cs: #596261;
-  --grey: #6E807A;
+  --grey: #9eb9b3;
 }
 
 body {
@@ -69,11 +69,11 @@ a.bg-primary:hover, a.bg-primary:focus {
 }
 
 .bg-accent {
-  background-color: #FF3D85 !important;
+  background-color: #597884 !important;
 }
 
 a.bg-accent:hover, a.bg-accent:focus {
-  background-color: #e93577 !important;
+  background-color: #597884 !important;
 }
 
 .bg-secondary {
@@ -117,11 +117,11 @@ a.bg-danger:hover, a.bg-danger:focus {
 }
 
 .bg-grey {
-  background-color: #6E807A !important;
+  background-color: #acc4ce !important;
 }
 
 a.bg-grey:hover, a.bg-grey:focus {
-  background-color: #62726d !important;
+  background-color: #acc4ce !important;
 }
 
 .bg-light {
@@ -133,7 +133,7 @@ a.bg-light:hover, a.bg-light:focus {
 }
 
 .bg-dark {
-  background-color: #343531 !important;
+  background-color: #294552 !important;
 }
 
 a.bg-dark:hover, a.bg-dark:focus {

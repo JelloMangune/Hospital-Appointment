@@ -8,19 +8,9 @@
 
   <meta name="copyright" content="MACode ID, https://macodeid.com/">
 
-  <title>MedAssis Home Page</title>
+  <title>ApptMed</title>
 
-  <link rel="stylesheet" href="../assets/css/maicons.css">
-
-  <link rel="stylesheet" href="../assets/css/bootstrap.css">
-
-  <link rel="stylesheet" href="../assets/vendor/owl-carousel/css/owl.carousel.css">
-
-  <link rel="stylesheet" href="../assets/vendor/animate/animate.css">
-
-  <link rel="stylesheet" href="../assets/css/theme.css">
-
-  <link rel="shortcut icon" href="admin/images/PIN.png" />
+  @include('user.style')
 </head>
 <body>
 
@@ -29,6 +19,12 @@
   <div class="back-to-top"></div>
 
   <header>
+  @if(session()->has('message'))
+        <div class="alert alert-success">
+            <button type="button" class="close" data-dismiss="alert">X</button>
+            {{session()->get('message')}}
+        </div>
+      @endif
     <div class="topbar">
       <div class="container">
         <div class="row">
@@ -42,8 +38,8 @@
           <div class="col-sm-4 text-right text-sm">
             <div class="social-mini-button">
               <a href="https://www.facebook.com/Med-Assis-110405315002836"><span class="mai-logo-facebook-f"></span></a>
-              <a href="#"><span class="mai-logo-twitter"></span></a>
-              <a href="#"><span class="mai-logo-instagram"></span></a>
+              <a href="https://twitter.com/ApptMed"><span class="mai-logo-twitter"></span></a>
+              <a href="https://www.instagram.com/apptmed/"><span class="mai-logo-instagram"></span></a>
             </div>
           </div>
         </div> <!-- .row -->
@@ -54,10 +50,10 @@
             <button type="button" class="close" data-dismiss="alert">X</button>
             This page is only dedicated for academic purposes. The appointments and the doctors are not real.
         </div>
-
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="#"><span class="text-primary">One</span>-Health</a>
+        <a class="navbar-brand" href="#"><span class="text-primary"><img alt="Qries" src="admin/images/admin_logo.png"
+         width=150 height="40" style="padding-bottom:8px;padding-right:0px;"></a>
 
         <form action="#">
           <div class="input-group input-navbar">
@@ -98,16 +94,15 @@
 
             @else
             <li class="nav-item">
-              <a class="btn btn-primary ml-lg-3" href="{{route('login');}}">Login</a>
+              <a class="btn btn-primary ml-lg-3" href="{{route('login');}}" style="margin-bottom:5px;">Login</a>
             </li>
             <li class="nav-item">
-              <a class="btn btn-primary ml-lg-3" href="{{route('register');}}">Register</a>
+              <a class="btn btn-primary ml-lg-3" href="{{route('register');}}" style="margin-bottom:5px;">Register</a>
             </li>
 
             @endauth
 
             @endif
-
 
           </ul>
         </div> <!-- .navbar-collapse -->
@@ -115,16 +110,15 @@
     </nav>
   </header>
 
-  <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_image_1.jpg);">
+  <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_three.png);">
     <div class="hero-section">
       <div class="container text-center wow zoomIn">
-        <span class="subhead">Let's make your life happier</span>
-        <h1 class="display-4">Healthy Living</h1>
+        <span class="subhead">Think Ahead</span>
+        <h1 class="display-4">Use <span style="font-family:Oleo Script Swash Caps;">Appoint<b>Med</b></span></h1>
         <a href="#" class="btn btn-primary">Let's Consult</a>
       </div>
     </div>
   </div>
-
 
   <div class="bg-light">
     <div class="page-section py-3 mt-md-n5 custom-index">
@@ -132,18 +126,18 @@
         <div class="row justify-content-center">
           <div class="col-md-4 py-3 py-md-0">
             <div class="card-service wow fadeInUp">
-              <div class="circle-shape bg-secondary text-white">
+              <div class="circle-shape bg-grey text-white">
                 <span class="mai-chatbubbles-outline"></span>
               </div>
-              <p><span>Chat</span> with a doctors</p>
+              <p><span>Talk</span> with our doctors</p>
             </div>
           </div>
           <div class="col-md-4 py-3 py-md-0">
             <div class="card-service wow fadeInUp">
-              <div class="circle-shape bg-primary text-white">
+              <div class="circle-shape bg-dark text-white">
                 <span class="mai-shield-checkmark"></span>
               </div>
-              <p><span>One</span>-Health Protection</p>
+              <p><span>Guaranteed</span> Protection</p>
             </div>
           </div>
           <div class="col-md-4 py-3 py-md-0">
@@ -151,7 +145,7 @@
               <div class="circle-shape bg-accent text-white">
                 <span class="mai-basket"></span>
               </div>
-              <p><span>One</span>-Health Pharmacy</p>
+              <p><span>High</span> Quality Services</p>
             </div>
           </div>
         </div>
@@ -179,6 +173,7 @@
   @include('user.doctors')
 
   @include('user.news')
+
   @include('user.appointment')
 
   <div class="page-section banner-home bg-image" style="background-image: url(../assets/img/banner-pattern.svg);">
