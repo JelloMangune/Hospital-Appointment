@@ -31,3 +31,12 @@ Route::middleware([
 Route::get('/add_doctor_view',[AdminPageController::class,'plusview']);
 Route::post('/doctor_uploaded',[AdminPageController::class,'doctorUpload']);
 Route::post('/appointment',[HomePageController::class,'appointment']);
+Route::get('/my-appointment',[HomePageController::class,'myAppointment']);
+Route::get('/cancel-appoint/{id}',[HomePageController::class,'cancelAppoint']);
+Route::get('/show-appointment',[AdminPageController::class,'showAppointment']);
+Route::get('/approve/{id}',[AdminPageController::class,'approve']);
+Route::get('/cancel/{id}',[AdminPageController::class,'cancel']);
+Route::get('/show-doctor',[AdminPageController::class,'showDoctor']);
+Route::get('/delete-doctor/{id}',[AdminPageController::class,'deleteDoctor']);
+Route::get('/update-doctor/{id}',[AdminPageController::class,'updateDoctor']);
+Route::post('/edit-doctor/{id}',[AdminPageController::class,'editDoctor']);

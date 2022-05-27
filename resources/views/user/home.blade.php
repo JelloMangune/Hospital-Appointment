@@ -46,10 +46,10 @@
       </div> <!-- .container -->
     </div> <!-- .topbar -->
 
-    <div class="alert alert-danger" style="text-align:center">
+    <!-- <div class="alert alert-danger" style="text-align:center">
             <button type="button" class="close" data-dismiss="alert">X</button>
             This page is only dedicated for academic purposes. The appointments and the doctors are not real.
-        </div>
+        </div> -->
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
       <div class="container">
         <a class="navbar-brand" href="#"><span class="text-primary"><img alt="Qries" src="admin/images/admin_logo.png"
@@ -88,10 +88,11 @@
 
             @if(Route::has('login'))
             @auth 
+            <li class="nav-item">
+              <a class="nav-link" href="{{url('my-appointment')}}" style="background-color:#3498DB;color:white;border-radius:5px;"><b>My Appointments</b></a>
+            </li>
             <x-app-layout>
-    
             </x-app-layout>
-
             @else
             <li class="nav-item">
               <a class="btn btn-primary ml-lg-3" href="{{route('login');}}" style="margin-bottom:5px;">Login</a>

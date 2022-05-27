@@ -49,5 +49,20 @@ class HomePageController extends Controller
         return redirect()->back()->with('message', 'Appointment Request Has Been Processed . We Will Contact You Soon!');
     }
 
-
+    public function myAppointment(){
+        if(Auth::id()){
+            $userid=Auth::user()->id;
+            $appoint=appointment::where('user_id',$userid)->get();
+            return view('user.my-appointment', compact('appoint'));
+        }
+        else{
+            return redirect()->back();
+        }
+        
+    }
+    public function cancelAppoint($id){
+        $data=appointment::find($id);
+        $data->delete();
+        return redirect()->back()->with('message', 'Appointment Request Has Been Deleted.');
+    }
 }

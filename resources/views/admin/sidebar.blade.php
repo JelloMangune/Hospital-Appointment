@@ -23,14 +23,14 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
+              <a class="nav-link" href="{{url('show-doctor')}}">
                 <span class="menu-title">All Doctors</span>
                 <i class="icon-layers menu-icon"></i>
               </a>
             </li>
             <li class="nav-item nav-category"><span class="nav-link"><span style="color:#007BFF;">Appointments</span></span></li>
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
+              <a class="nav-link" href="{{url('show-appointment')}}">
                 <span class="menu-title">Appointment list</span>
                 <i class="icon-book-open menu-icon"></i>
               </a>
