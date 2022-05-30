@@ -8,7 +8,7 @@
       @include('admin.navbar')
       <div class="container-fluid page-body-wrapper">
       @include('admin.sidebar')
-
+      <div class="main-panel">
       <div class="container" align="center" style="padding-top:100px;">
       
       @if(session()->has('message'))

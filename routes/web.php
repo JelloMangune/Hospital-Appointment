@@ -16,7 +16,7 @@ use App\Http\Controllers\AdminPageController;
 
 Route::get('', [HomePageController::class,'index']);
 
-Route::get('/home', [HomePageController::class,'redirect']);
+Route::get('/home', [HomePageController::class,'redirect'])->middleware('auth','verified');
 
 Route::middleware([
     'auth:sanctum',
@@ -40,3 +40,5 @@ Route::get('/show-doctor',[AdminPageController::class,'showDoctor']);
 Route::get('/delete-doctor/{id}',[AdminPageController::class,'deleteDoctor']);
 Route::get('/update-doctor/{id}',[AdminPageController::class,'updateDoctor']);
 Route::post('/edit-doctor/{id}',[AdminPageController::class,'editDoctor']);
+Route::get('/email-display/{id}',[AdminPageController::class,'emailDisplay']);
+Route::post('/send-email/{id}',[AdminPageController::class,'sendEmail']);

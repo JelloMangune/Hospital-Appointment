@@ -52,7 +52,7 @@
         </div> -->
     <nav class="navbar navbar-expand-lg navbar-light shadow-sm">
       <div class="container">
-        <a class="navbar-brand" href="#"><span class="text-primary"><img alt="Qries" src="admin/images/admin_logo.png"
+        <a class="navbar-brand" href="{{url('/')}}"><span class="text-primary"><img alt="Qries" src="admin/images/admin_logo.png"
          width=150 height="40" style="padding-bottom:8px;padding-right:0px;"></a>
 
         <form action="#">
@@ -71,19 +71,19 @@
         <div class="collapse navbar-collapse" id="navbarSupport">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item active">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="{{url('/')}}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
+              <a class="nav-link" href="html/about.html">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="doctors.html">Doctors</a>
+              <a class="nav-link" href="html/doctors.html">Doctors</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blog.html">News</a>
+              <a class="nav-link" href="html/blog.html">News</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="html/contact.html">Contact</a>
             </li>
 
             @if(Route::has('login'))

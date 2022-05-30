@@ -1,7 +1,8 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+        <base href="/public">
+        <img src="admin/images/med_assis_logo.png" alt="logo" style="width:280px;height:190px;"class="logo-dark" />
         </x-slot>
 
         <div class="mb-4 text-sm text-gray-600">
@@ -19,7 +20,7 @@
                 @csrf
 
                 <div>
-                    <x-jet-button type="submit">
+                    <x-jet-button type="submit" >
                         {{ __('Resend Verification Email') }}
                     </x-jet-button>
                 </div>

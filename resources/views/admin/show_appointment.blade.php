@@ -8,7 +8,7 @@
       @include('admin.navbar')
       <div class="container-fluid page-body-wrapper">
       @include('admin.sidebar')
-      
+      <div class="main-panel">
       <div align="center" style="padding:30px;color:white;">
           <table>
               <tr style="background-color:black;">
@@ -21,6 +21,7 @@
                 <th style="padding:10px">Status</th>
                 <th style="padding:10px">Approve</th>
                 <th style="padding:10px">Cancel</th>
+                <th style="padding:10px">Send Email</th>
               </tr>
               @foreach($data as $appoint)
               <tr align="center" style="background-color:skyblue;">
@@ -34,8 +35,11 @@
                 <td>
                     <a class="btn btn-success" href="{{url('approve',$appoint->id)}}">Approve</a>
                 </td>
-                <<td>
+                <td>
                     <a class="btn btn-danger" href="{{url('cancel',$appoint->id)}}">Cancel</a>
+                </td>
+                <td>
+                    <a class="btn btn-primary" href="{{url('email-display',$appoint->id)}}">Send Email</a>
                 </td>
               </tr>
               @endforeach

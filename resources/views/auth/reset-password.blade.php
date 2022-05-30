@@ -1,7 +1,8 @@
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
-            <x-jet-authentication-card-logo />
+        <base href="/public">
+        <img src="admin/images/med_assis_logo.png" alt="logo" style="width:250px;height:170px;"class="logo-dark" />
         </x-slot>
 
         <x-jet-validation-errors class="mb-4" />

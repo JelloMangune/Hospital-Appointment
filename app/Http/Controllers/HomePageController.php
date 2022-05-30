@@ -51,9 +51,11 @@ class HomePageController extends Controller
 
     public function myAppointment(){
         if(Auth::id()){
-            $userid=Auth::user()->id;
-            $appoint=appointment::where('user_id',$userid)->get();
-            return view('user.my-appointment', compact('appoint'));
+            if(Auth::user()->usertype==0){
+                $userid=Auth::user()->id;
+                $appoint=appointment::where('user_id',$userid)->get();
+                return view('user.my-appointment', compact('appoint'));
+            }
         }
         else{
             return redirect()->back();

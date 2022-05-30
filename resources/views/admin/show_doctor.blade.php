@@ -8,6 +8,7 @@
       @include('admin.navbar')
       <div class="container-fluid page-body-wrapper">
       @include('admin.sidebar')
+      <div class="main-panel">
       <div align="center" style="padding:20px;color:white;">
           <table>
               <tr style="background-color:black;">
