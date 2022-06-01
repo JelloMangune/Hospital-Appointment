@@ -9,8 +9,11 @@
   <meta name="copyright" content="MACode ID, https://macodeid.com/">
 
   <title>ApptMed</title>
-
-  @include('user.style')
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.0/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.js"></script>
+    @include('user.style')
 </head>
 <body>
 
@@ -60,26 +63,26 @@
 
         <div class="collapse navbar-collapse" id="navbarSupport">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="{{url('/')}}">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="about.html">About Us</a>
+              <a class="nav-link" href="{{url('about-us')}}">About Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="doctors.html">Doctors</a>
+              <a class="nav-link" href="{{url('doctor-page')}}">Doctors</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="blog.html">News</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
+              <a class="nav-link" href="contact.html">Book Now!</a>
             </li>
 
             @if(Route::has('login'))
             @auth 
             <li class="nav-item">
-              <a class="nav-link" href="{{url('my-appointment')}}" style="background-color:#3498DB;color:white;border-radius:5px;"><b>My Appointments</b></a>
+              <a class="nav-link" href="{{url('my-appointment')}}" style="background-color:gray;color:white;border-radius:5px;pointer-events:none;"><b>My Appointments</b></a>
             </li>
             <x-app-layout>
             </x-app-layout>
@@ -100,51 +103,47 @@
       </div> <!-- .container -->
     </nav>
   </header>
-
-    <div align="center" style="padding:70px;">
-        <table>
-        @if(session()->has('message'))
-        <div class="alert alert-success">
-            <button type="button" class="close" data-dismiss="alert">X</button>
-            {{session()->get('message')}}
+    <div class="container"><h1 style="Font-size:45px;margin-top:50px;">MY APPOINTMENTS</h1></div>
+    <div class="container" align="center" style="padding:40px;border-width:2px;margin-top:10px;border-style:solid;border-color:black;border-radius:10px;">
+                <table class="display" id="appointment-table">
+                @if(session()->has('message'))
+                  <div class="alert alert-success">
+                      <button type="button" class="close" data-dismiss="alert">X</button>
+                      {{session()->get('message')}}
+                  </div>
+                @endif
+                <thead>
+                    <tr>
+                        <th style="font-size: 20px;" >Doctor Name</th>
+                        <th style="font-size: 20px;">Date</th>
+                        <th style="font-size: 20px;">Message</th>
+                        <th style="font-size: 20px;">Status</th>
+                        <th style="font-size: 20px;">Cancel Appointment</th>
+                    </tr>
+                </thead>
+                <tbody>
+                @foreach($appoint as $appoints)
+                    <tr>
+                        <td>{{$appoints->doctor}}</td>
+                        <td>{{$appoints->date}}</td>
+                        <td>{{$appoints->message}}</td>
+                        <td><b><u>{{$appoints->status}}<u></b></td>
+                        <td>
+                          <a class="btn btn-danger" href="{{url('cancel-appoint',$appoints->id)}}" 
+                          onclick="return confirm('Are you sure you want to delete your appointment request with {{$appoints->doctor}} on {{$appoints->date}}')">
+                          Cancel</a>
+                        </td>
+                    </tr>                        
+                @endforeach
+                </tbody>         
+                </table>
         </div>
-      @endif
-            <tr style="background-color:black">
-                <th style="padding:10px;font-size:20px;color:white;">Doctor Name</th>
-                <th style="padding:10px;font-size:20px;color:white;">Date</th>
-                <th style="padding:10px;font-size:20px;color:white;">Message</th>
-                <th style="padding:10px;font-size:20px;color:white;">Status</th>
-                <th style="padding:10px;font-size:20px;color:white;">Cancel Appointment</th>
-            </tr>
-            @foreach($appoint as $appoints)
-            <tr style="background-color:black" align="center">
-                <td style="padding:10px;color:white;">{{$appoints->doctor}}</td>
-                <td style="padding:10px;color:white;">{{$appoints->date}}</td>
-                <td style="padding:10px;color:white;">{{$appoints->message}}</td>
-                <td style="padding:10px;color:white;">{{$appoints->status}}</td>
-                <td><a class="bt btn-danger" href="{{url('cancel-appoint',$appoints->id)}}" 
-                onclick="return confirm('Are you sure you want to delete your appointment request with {{$appoints->doctor}} on {{$appoints->date}}')">
-                Cancel</a></td>
-            </tr>
-            @endforeach
-        </table>
-    </div>
-  
 
-
-
-
-
-
-<script src="../assets/js/jquery-3.5.1.min.js"></script>
-
-<script src="../assets/js/bootstrap.bundle.min.js"></script>
-
-<script src="../assets/vendor/owl-carousel/js/owl.carousel.min.js"></script>
-
-<script src="../assets/vendor/wow/wow.min.js"></script>
-
-<script src="../assets/js/theme.js"></script>
+        <script>
+            $(document).ready( function () {
+                 $('#appointment-table').DataTable();
+            } );
+        </script>
   
 </body>
 </html>

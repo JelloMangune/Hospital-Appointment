@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <base href="/public">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -13,11 +14,8 @@
   @include('user.style')
 </head>
 <body>
-
-
   <!-- Back to top button -->
   <div class="back-to-top"></div>
-
   <header>
   @if(session()->has('message'))
         <div class="alert alert-success">
@@ -70,13 +68,13 @@
 
         <div class="collapse navbar-collapse" id="navbarSupport">
           <ul class="navbar-nav ml-auto">
-            <li class="nav-item active">
+            <li class="nav-item">
               <a class="nav-link" href="{{url('/')}}">Home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="{{url('about-us')}}">About Us</a>
             </li>
-            <li class="nav-item">
+            <li class="nav-item  active">
               <a class="nav-link" href="{{url('doctor-page')}}">Doctors</a>
             </li>
             <li class="nav-item">
@@ -85,7 +83,6 @@
             <li class="nav-item">
               <a class="nav-link" href="html/contact.html">Book Now!</a>
             </li>
-
             @if(Route::has('login'))
             @auth 
             <li class="nav-item">
@@ -101,99 +98,59 @@
             <li class="nav-item">
               <a class="btn btn-primary ml-lg-3" href="{{route('register');}}" style="margin-bottom:5px;">Register</a>
             </li>
-
             @endauth
-
             @endif
-
           </ul>
         </div> <!-- .navbar-collapse -->
       </div> <!-- .container -->
     </nav>
   </header>
 
-  <div class="page-hero bg-image overlay-dark" style="background-image: url(../assets/img/bg_three.png);padding-left:20px;">
-    <div class="hero-section">
-      <div class="container text-center wow zoomIn">
-        <span class="subhead">Think Ahead</span>
-        <h1 class="display-4">Use <span style="font-family:Oleo Script Swash Caps;">Appoint<b>Med</b></span></h1>
-        <a class="btn btn-primary" href="#myDiv">Let's Consult</a>
-      </div>
-    </div>
-  </div>
+  <div class="page-banner overlay-dark bg-image" style="background-image: url(../assets/img/bg_three.png);">
+    <div class="banner-section">
+      <div class="container text-center wow fadeInUp">
+        <nav aria-label="Breadcrumb">
+          <ol class="breadcrumb breadcrumb-dark bg-transparent justify-content-center py-0 mb-2">
+            <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Doctors</li>
+          </ol>
+        </nav>
+        <h1 class="font-weight-normal">Our Doctors</h1>
+      </div> <!-- .container -->
+    </div> <!-- .banner-section -->
+  </div> <!-- .page-banner -->
 
-  <div class="bg-light" style="padding-left:95px">
-    <div class="page-section py-3 mt-md-n5 custom-index">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-md-4 py-3 py-md-0">
-            <div class="card-service wow fadeInUp">
-              <div class="circle-shape bg-grey text-white">
-                <span class="mai-chatbubbles-outline"></span>
+  <div class="page-section bg-light">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
+
+          <div class="row justify-content-center">
+            
+            @foreach($doctor as $doctors)
+            <div class="col-md-6 col-lg-4 py-3 wow zoomIn">
+              <div class="card-doctor">
+                <div class="header">
+                  <img style="height: 300px !important" src="doctor_images/{{$doctors->image}}" alt="">
+                  <div class="meta">
+                    <a href="#"><span class="mai-call"></span></a>
+                    <a href="#"><span class="mai-logo-whatsapp"></span></a>
+                  </div>
+                </div>
+                <div class="body">
+                  <p class="text-xl mb-0">{{$doctors->name}}</p>
+                  <span class="text-sm text-grey">{{$doctors->specialization}}</span>
+                </div>
               </div>
-              <p><span>Talk</span> with our doctors</p>
             </div>
+          @endforeach
+
           </div>
-          <div class="col-md-4 py-3 py-md-0">
-            <div class="card-service wow fadeInUp">
-              <div class="circle-shape bg-dark text-white">
-                <span class="mai-shield-checkmark"></span>
-              </div>
-              <p><span>Guaranteed</span> Protection</p>
-            </div>
-          </div>
-          <div class="col-md-4 py-3 py-md-0">
-            <div class="card-service wow fadeInUp">
-              <div class="circle-shape bg-accent text-white">
-                <span class="mai-basket"></span>
-              </div>
-              <p><span>High</span> Quality Services</p>
-            </div>
-          </div>
+
         </div>
       </div>
-    </div> <!-- .page-section -->
-
-    <div class="page-section pb-0">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-lg-6 py-3 wow fadeInUp">
-            <h1>Welcome to AppointMed</h1>
-            <p class="text-grey mb-4" style="text-align:justify">Thank you for using Appointmed! An automated appointment booking system that will look after your appointments. Our site holds a wealth of information about the services and programs we offer for the clients as well as schedules, availability, and recommendations.<br><br>It is valuable to know that when it comes to getting the best help in the shortest amount of time, you don't have far to go. We're here to help you get well, get healthy, and get your life back to normal as quickly as possible. As we prepare for the opportunities and challenges ahead, we will continue to make decisions based on the needs of our patients and the community.  Whether you need to find a physician or specialist or just want to learn more about optimizing your health and wellness, we invite you to contact us or use some of the interactive features of this website to help you make healthy choices for you and your family.<br><br>We welcome the opportunity to serve you now and in the future.</p>
-            <a href="about.html" class="btn btn-primary">Learn More</a>
-          </div>
-          <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
-            <div class="img-place custom-img-1">
-              <img src="../assets/img/bg-doctor.png" alt="">
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> <!-- .bg-light -->
-  </div> <!-- .bg-light -->
-
-  @include('user.doctors')
-
-  @include('user.news')
-
-  @include('user.appointment')
-
-  <div class="page-section banner-home bg-image" style="background-image: url(../assets/img/banner-pattern.svg);">
-    <div class="container py-5 py-lg-0">
-      <div class="row align-items-center">
-        <div class="col-lg-4 wow zoomIn">
-          <div class="img-banner d-none d-lg-block">
-            <img src="../assets/img/mobile_app.png" alt="">
-          </div>
-        </div>
-        <div class="col-lg-8 wow fadeInRight">
-          <h1 class="font-weight-normal mb-3">Get easy access of all features using One Health Application</h1>
-          <a href="#"><img src="../assets/img/google_play.svg" alt=""></a>
-          <a href="#" class="ml-2"><img src="../assets/img/app_store.svg" alt=""></a>
-        </div>
-      </div>
-    </div>
-  </div> <!-- .banner-home -->
+    </div> <!-- .container -->
+  </div> <!-- .page-section -->
 
   <footer class="page-footer">
     <div class="container">
@@ -246,7 +203,6 @@
       <p id="copyright">Copyright &copy; 2020 <a href="https://macodeid.com/" target="_blank">MACode ID</a>. All right reserved</p>
     </div>
   </footer>
-
 
 <script src="../assets/js/jquery-3.5.1.min.js"></script>
 

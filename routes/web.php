@@ -42,3 +42,5 @@ Route::get('/update-doctor/{id}',[AdminPageController::class,'updateDoctor']);
 Route::post('/edit-doctor/{id}',[AdminPageController::class,'editDoctor']);
 Route::get('/email-display/{id}',[AdminPageController::class,'emailDisplay']);
 Route::post('/send-email/{id}',[AdminPageController::class,'sendEmail']);
+Route::get('/about-us', [HomePageController::class,'aboutUs']);
+Route::get('/doctor-page', [HomePageController::class,'doctorPage']);

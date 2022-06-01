@@ -67,4 +67,12 @@ class HomePageController extends Controller
         $data->delete();
         return redirect()->back()->with('message', 'Appointment Request Has Been Deleted.');
     }
+    public function aboutUs(){
+        $doctor = doctor::all();
+        return view('user.about-us', compact('doctor'));
+    }
+    public function doctorPage(){
+        $doctor = doctor::all();
+        return view('user.doctor-page', compact('doctor'));
+    }
 }

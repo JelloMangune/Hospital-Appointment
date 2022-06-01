@@ -1,5 +1,5 @@
   
-  <div class="page-section">
+  <div class="page-section" id="myDiv">
     <div class="container">
       <h1 class="text-center wow fadeInUp">Make an Appointment</h1>
 
@@ -10,14 +10,14 @@
             <input type="text" name="name" class="form-control" placeholder="Full name" required>
           </div>
           <div class="col-12 col-sm-6 py-2 wow fadeInRight">
-            <input type="text" name="email" class="form-control" placeholder="Email address.." required>
+            <input type="email" name="email" class="form-control" placeholder="Email address.." required>
           </div>
           <div class="col-12 col-sm-6 py-2 wow fadeInLeft" data-wow-delay="300ms" required>
-            <input type="date" name="date" class="form-control">
+            <input type="date" name="date" class="form-control" required>
           </div>
           <div class="col-12 col-sm-6 py-2 wow fadeInRight" data-wow-delay="300ms">
             <select name="doctor" id="doctor" class="custom-select" required>
-              <option>---select doctor----</option>
+              <option value="">---select doctor----</option>
               @foreach($doctor as $doctors)
               <option value="{{$doctors->name}}">{{$doctors->name}} ({{$doctors->specialization}})</option>
               @endforeach
