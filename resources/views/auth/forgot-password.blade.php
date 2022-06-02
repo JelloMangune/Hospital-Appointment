@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="../assets/css/bootstrap.css">
+<link href='https://fonts.googleapis.com/css?family=Inria Serif' rel='stylesheet'>
 <x-guest-layout>
     <x-jet-authentication-card>
         <x-slot name="logo">
@@ -25,6 +27,7 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
+            <a class="btn btn-secondary btn-sm" href="{{url('/');}}" style="margin-right: 10px;">cancel</a>
                 <x-jet-button>
                     {{ __('Email Password Reset Link') }}
                 </x-jet-button>

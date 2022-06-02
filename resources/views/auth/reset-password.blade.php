@@ -28,6 +28,7 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
+            <a class="btn btn-secondary btn-sm" href="{{url('/');}}" style="margin-right:10px;">cancel</a>
                 <x-jet-button>
                     {{ __('Reset Password') }}
                 </x-jet-button>

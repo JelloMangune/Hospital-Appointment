@@ -155,10 +155,9 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-8 wow fadeInUp">
-          <h1 class="text-center mb-3">Welcome to Your Health Center</h1>
+          <h1 class="text-center mb-3">Welcome to AppointMed</h1>
           <div class="text-lg">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt neque sit, explicabo vero nulla animi nemo quae cumque, eaque pariatur eum ut maxime! Tenetur aperiam maxime iure explicabo aut consequuntur. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt neque sit, explicabo vero nulla animi nemo quae cumque, eaque pariatur eum ut maxime! Tenetur aperiam maxime iure explicabo aut consequuntur.</p>
-            <p>Expedita iusto sunt beatae esse id nihil voluptates magni, excepturi distinctio impedit illo, incidunt iure facilis atque, inventore reprehenderit quidem aliquid recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium quod ad sequi atque accusamus deleniti placeat dignissimos illum nulla voluptatibus vel optio, molestiae dolore velit iste maxime, nobis odio molestias!</p>
+            <p style="text-align:justify">Thank you for using Appointmed! An automated appointment booking system that will look after your appointments. Our site holds a wealth of information about the services and programs we offer for the clients as well as schedules, availability, and recommendations.<br><br>It is valuable to know that when it comes to getting the best help in the shortest amount of time, you don't have far to go. We're here to help you get well, get healthy, and get your life back to normal as quickly as possible. As we prepare for the opportunities and challenges ahead, we will continue to make decisions based on the needs of our patients and the community.  Whether you need to find a physician or specialist or just want to learn more about optimizing your health and wellness, we invite you to contact us or use some of the interactive features of this website to help you make healthy choices for you and your family.<br><br>We welcome the opportunity to serve you now and in the future.</p>
           </div>
         </div>
         <div class="col-lg-10 mt-5">

@@ -159,8 +159,8 @@
         <div class="row align-items-center">
           <div class="col-lg-6 py-3 wow fadeInUp">
             <h1>Welcome to AppointMed</h1>
-            <p class="text-grey mb-4" style="text-align:justify">Thank you for using Appointmed! An automated appointment booking system that will look after your appointments. Our site holds a wealth of information about the services and programs we offer for the clients as well as schedules, availability, and recommendations.<br><br>It is valuable to know that when it comes to getting the best help in the shortest amount of time, you don't have far to go. We're here to help you get well, get healthy, and get your life back to normal as quickly as possible. As we prepare for the opportunities and challenges ahead, we will continue to make decisions based on the needs of our patients and the community.  Whether you need to find a physician or specialist or just want to learn more about optimizing your health and wellness, we invite you to contact us or use some of the interactive features of this website to help you make healthy choices for you and your family.<br><br>We welcome the opportunity to serve you now and in the future.</p>
-            <a href="about.html" class="btn btn-primary">Learn More</a>
+            <p class="text-grey mb-4" style="text-align:justify">Thank you for using Appointmed! An automated appointment booking system that will look after your appointments. Our site holds a wealth of information about the services and programs we offer for the clients as well as schedules, availability, and recommendations.<br><br>We welcome the opportunity to serve you now and in the future.</p>
+            <a href="{{url('about-us')}}" class="btn btn-primary">Learn More</a>
           </div>
           <div class="col-lg-6 wow fadeInRight" data-wow-delay="400ms">
             <div class="img-place custom-img-1">

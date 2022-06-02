@@ -9,8 +9,8 @@
       <div class="container-fluid page-body-wrapper">
       @include('admin.sidebar')
       <div class="main-panel">
-      <div class="container" align="center" style="padding-top:100px;">
-      
+      <div class="container" align="center"><h1 style="Font-size:30px;margin-top:20px;">ADD DOCTOR</h1></div>
+      <div class="container" align="center" style="padding:20px;width:500px;border-width:2px;margin-top:10px;border-style:solid;border-color:black;border-radius:10px;">
       @if(session()->has('message'))
         <div class="alert alert-success">
             <button type="button" class="close" data-dismiss="alert">X</button>
