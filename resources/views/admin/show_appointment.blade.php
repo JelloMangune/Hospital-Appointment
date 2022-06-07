@@ -13,53 +13,81 @@
       @include('admin.sidebar')
       <div class="main-panel">
       <div class="container"><h1 style="Font-size:30px;margin-top:20px;">APPPOINTMENT LIST</h1></div>
-      <div class="container" align="center" style="padding:40px;border-width:2px;margin-top:10px;border-style:solid;border-color:black;border-radius:10px;">
+      <div class="container" align="center" style="padding:1px;border-width:2px;margin-top:10px;border-style:solid;border-color:black;border-radius:10px;">
                 <table class="display" id="pets-table">
                 <thead>
                     <tr>
-                      <th style="font-size:13px;">Customer Name</th>
-                      <th style="font-size:13px;">Email</th>
-                      <th style="font-size:13px;">Phone</th>
-                      <th style="font-size:13px;">Doctor</th>
-                      <th style="font-size:13px;">Date</th>
-                      <th style="font-size:13px;">Message</th>
-                      <th style="font-size:13px;">Status</th>
-                      <th style="font-size:13px;">Approve</th>
-                      <th style="font-size:13px;">Cancel</th>
-                      <th style="font-size:13px;">Send Email</th>
+                      <th style="font-size:12px;">Customer Name</th>
+                      <th style="font-size:12px;">Email</th>
+                      <th style="font-size:12px;">Phone</th>
+                      <th style="font-size:12px;">Doctor</th>
+                      <th style="font-size:12px;">Date</th>
+                      <th style="font-size:12px;">Message</th>
+                      <th style="font-size:12px;">Status</th>
+                      <th style="font-size:12px;">Approve</th>
+                      <th style="font-size:12px;">Cancel</th>
+                      <th style="font-size:12px;">Send Email</th>
+                      <th style="font-size:12px;">Completed</th>
+                      <th style="font-size:12px;">Delete</th>
                     </tr>
                 </thead>
                 <tbody>
                 @foreach($data as $appoint)
                     <tr>
-                      <td style="font-size:13px;">{{$appoint->name}}</td>
-                      <td style="font-size:13px;">{{$appoint->email}}</td>
-                      <td style="font-size:13px;">{{$appoint->number}}</td>
-                      <td style="font-size:13px;">{{$appoint->doctor}}</td>
-                      <td style="font-size:13px;">{{$appoint->date}}</td>
-                      <td style="font-size:13px;">{{$appoint->message}}</td>
-                      <td style="font-size:13px;"><b><u>{{$appoint->status}}</b></u></td>
-                      @if ($appoint->status=="Approved")
-                      <td style="font-size:13px;">
-                          <a class="btn btn-secondary" href="{{url('approve',$appoint->id)}}" style="pointer-events:none;">Approve</a>
-                      </td>
+                      <td style="font-size:12px;">{{$appoint->name}}</td>
+                      <td style="font-size:12px;">{{$appoint->email}}</td>
+                      <td style="font-size:12px;">{{$appoint->number}}</td>
+                      <td style="font-size:12px;">{{$appoint->doctor}}</td>
+                      <td style="font-size:12px;">{{$appoint->date}}</td>
+                      <td style="font-size:12px;">{{$appoint->message}}</td>
+                      <td style="font-size:12px;"><b><u>{{$appoint->status}}</b></u></td>
+                      @if ($appoint->status=="Completed")
+                          <td style="font-size:12px;">
+                            <a class="btn btn-secondary btn-sm" href="{{url('approve',$appoint->id)}}" style="pointer-events:none;font-size:13px;">Approve</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-secondary btn-sm" href="{{url('cancel',$appoint->id)}}"style="pointer-events:none;font-size:13px;">Cancel</a>
+                        </td>
+                        <td>
+                          <a class="btn btn-primary btn-sm" href="{{url('email-display',$appoint->id)}}" style="font-size:13px;">Send Email</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-secondary btn-sm" href="{{url('finish',$appoint->id)}}"style="pointer-events:none;font-size:13px;" onclick="return confirm('Are you sure you want to complete this appointment of {{$appoint->name}}?')">Completed</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-danger btn-sm" href="{{url('delete',$appoint->id)}}" onclick="return confirm('Are you sure you want to delete this appointment of {{$appoint->name}}?')" style="font-size:13px;">Delete</a>
+                        </td>
                       @else
-                      <td style="font-size:13px;">
-                          <a class="btn btn-success" href="{{url('approve',$appoint->id)}}">Approve</a>
-                      </td>
+                        @if ($appoint->status=="Approved")
+                        <td style="font-size:12px;">
+                            <a class="btn btn-secondary btn-sm" href="{{url('approve',$appoint->id)}}" style="pointer-events:none;font-size:13px;">Approve</a>
+                        </td>
+                        @else
+                        <td style="font-size:12px;">
+                            <a class="btn btn-success btn-sm" href="{{url('approve',$appoint->id)}}" style="font-size:13px;">Approve</a>
+                        </td>
+                        @endif
+                        @if ($appoint->status=="Canceled")
+                        <td>
+                            <a class="btn btn-secondary btn-sm" href="{{url('cancel',$appoint->id)}}"style="pointer-events:none;font-size:13px;">Cancel</a>
+                        </td>
+                        @else
+                        <td>
+                            <a class="btn btn-danger btn-sm" href="{{url('cancel',$appoint->id)}}" style="font-size:13px;">Cancel</a>
+                        </td>
+                        @endif
+                        <td>
+                          <a class="btn btn-primary btn-sm" href="{{url('email-display',$appoint->id)}}" style="font-size:13px;">Send Email</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-warning btn-sm" href="{{url('finish',$appoint->id)}}" onclick="return confirm('Are you sure you want to complete this appointment of {{$appoint->name}}?')" style="font-size:13px;">Completed</a>
+                        </td>
+                        <td>
+                            <a class="btn btn-danger btn-sm" href="{{url('delete',$appoint->id)}}" onclick="return confirm('Are you sure you want to delete this appointment of {{$appoint->name}}?')" style="font-size:13px;">Delete</a>
+                        </td>
                       @endif
-                      @if ($appoint->status=="Canceled")
-                      <td>
-                          <a class="btn btn-secondary" href="{{url('cancel',$appoint->id)}}"style="pointer-events:none;">Cancel</a>
-                      </td>
-                      @else
-                      <td>
-                          <a class="btn btn-danger" href="{{url('cancel',$appoint->id)}}">Cancel</a>
-                      </td>
-                      @endif
-                      <td>
-                          <a class="btn btn-primary" href="{{url('email-display',$appoint->id)}}">Send Email</a>
-                      </td>
+                      
+                      
                     </tr> 
                 @endforeach                       
                 </tbody>         

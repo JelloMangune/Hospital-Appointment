@@ -64,6 +64,17 @@ class AdminPageController extends Controller
         $data->save();
         return redirect()->back();
     }
+    public function finish($id){
+        $data=appointment::find($id);
+        $data->status='Completed';
+        $data->save();
+        return redirect()->back();
+    }
+    public function delete($id){
+        $data=appointment::find($id);
+        $data->delete();
+        return redirect()->back();
+    }
     public function showDoctor(){
         $data=doctor::all();
         return view('admin.show_doctor',compact('data'));

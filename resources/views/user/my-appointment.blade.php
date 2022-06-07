@@ -73,10 +73,7 @@
               <a class="nav-link" href="{{url('doctor-page')}}">Doctors</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="blog.html">News</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Book Now!</a>
+              <a class="nav-link" href="{{url('news-page')}}">News</a>
             </li>
 
             @if(Route::has('login'))
@@ -129,9 +126,13 @@
                         <td>{{$appoints->message}}</td>
                         <td><b><u>{{$appoints->status}}<u></b></td>
                         <td>
+                          @if($appoints->status=="Approved")
+                          <a class="btn btn-accent" style="pointer-events:none;color:white;background-color:#597884">Cancel</a>
+                          @else
                           <a class="btn btn-danger" href="{{url('cancel-appoint',$appoints->id)}}" 
                           onclick="return confirm('Are you sure you want to delete your appointment request with {{$appoints->doctor}} on {{$appoints->date}}')">
                           Cancel</a>
+                          @endif
                         </td>
                     </tr>                        
                 @endforeach

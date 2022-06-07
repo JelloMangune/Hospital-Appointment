@@ -78,11 +78,9 @@
               <a class="nav-link" href="{{url('doctor-page')}}">Doctors</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="html/blog.html">News</a>
+              <a class="nav-link" href="{{url('news-page')}}">News</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="html/contact.html">Book Now!</a>
-            </li>
+            
             @if(Route::has('login'))
             @auth 
             <li class="nav-item">

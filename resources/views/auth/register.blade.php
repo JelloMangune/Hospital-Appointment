@@ -62,9 +62,9 @@
 
             <div class="flex items-center justify-end mt-4">
                 <a class="underline text-sm text-gray-600 hover:text-gray-900" href="{{ route('login') }}" style="margin-right:80px;">
-                    {{ __('Already registered?') }}
+                    {{ __('Have an account?') }}
                 </a>
-                <a class="btn btn-secondary btn-sm" href="{{url('/');}}" style="margin-right:-10px;">cancel</a>
+                <a class="btn btn-secondary btn-sm" href="{{url('/');}}" style="margin-right:-10px;font-style:Nunito;padding:6px;padding-left:12px;padding-right:12px;font-size:12px;letter-spacing:1px;">CANCEL</a>
                 <x-jet-button class="ml-4">
                     {{ __('Register') }}
                 </x-jet-button>

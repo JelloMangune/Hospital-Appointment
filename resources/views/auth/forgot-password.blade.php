@@ -27,7 +27,7 @@
             </div>
 
             <div class="flex items-center justify-end mt-4">
-            <a class="btn btn-secondary btn-sm" href="{{url('/');}}" style="margin-right: 10px;">cancel</a>
+            <a class="btn btn-secondary btn-sm" href="{{url('/');}}" style="margin-right: 10px;font-style:Nunito;padding:6px;padding-left:12px;padding-right:12px;font-size:12px;letter-spacing:1px;">CANCEL</a>
                 <x-jet-button>
                     {{ __('Email Password Reset Link') }}
                 </x-jet-button>

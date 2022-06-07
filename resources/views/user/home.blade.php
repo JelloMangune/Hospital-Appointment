@@ -8,6 +8,30 @@
 
   <meta name="copyright" content="MACode ID, https://macodeid.com/">
 
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Task', 'Hours per Day'],
+            ['Work',     11],
+            ['Eat',      2],
+            ['Commute',  2],
+            ['Watch TV', 2],
+            ['Sleep',    7]
+          ]);
+
+          var options = {
+            title: 'My Daily Activities',
+            is3D: true,
+          };
+
+          var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+          chart.draw(data, options);
+        }
+  </script>
+
   <title>ApptMed</title>
 
   @include('user.style')
@@ -80,12 +104,8 @@
               <a class="nav-link" href="{{url('doctor-page')}}">Doctors</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="html/blog.html">News</a>
+              <a class="nav-link" href="{{url('news-page')}}">News</a>
             </li>
-            <li class="nav-item">
-              <a class="nav-link" href="html/contact.html">Book Now!</a>
-            </li>
-
             @if(Route::has('login'))
             @auth 
             <li class="nav-item">

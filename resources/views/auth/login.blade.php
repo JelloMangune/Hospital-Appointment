@@ -41,7 +41,7 @@
                         {{ __('Forgot your password?') }}
                     </a>
                 @endif
-                <a class="btn btn-secondary btn-sm" href="{{url('/');}}" style="margin-right:-10px;">cancel</a>
+                <a class="btn btn-secondary btn-sm" href="{{url('/');}}" style="margin-right:-10px;font-style:Nunito;padding:6px;padding-left:12px;padding-right:12px;font-size:12px;letter-spacing:1px;">CANCEL</a>
                 <x-jet-button class="ml-4">
                     {{ __('Log in') }}
                 </x-jet-button>

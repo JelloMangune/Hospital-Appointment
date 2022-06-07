@@ -17,7 +17,30 @@ class HomePageController extends Controller
                 return view('user.home', compact('doctor'));
             }
             else{
-                return view('admin.home');
+                $data = appointment::select(
+                    'doctor',
+                    appointment::raw('COUNT(id) AS doctor_size')
+                )
+                ->groupBy('doctor')
+                ->orderBy('doctor_size', 'DESC')
+                ->get();
+                
+                $data_doctor = doctor::select(
+                    'specialization',
+                    doctor::raw('COUNT(id) AS specialization_size')
+                )
+                ->groupBy('specialization')
+                ->orderBy('specialization_size', 'DESC')
+                ->get();
+                
+                $data_status = appointment::select(
+                    'status',
+                    appointment::raw('COUNT(id) AS status_size')
+                )
+                ->groupBy('status')
+                ->orderBy('status_size', 'DESC')
+                ->get();
+                return view('admin.home', compact('data', 'data_doctor', 'data_status'));
             }
         }
         else{
@@ -74,5 +97,8 @@ class HomePageController extends Controller
     public function doctorPage(){
         $doctor = doctor::all();
         return view('user.doctor-page', compact('doctor'));
+    }
+    public function newsPage(){
+        return view('user.news-page');
     }
 }
