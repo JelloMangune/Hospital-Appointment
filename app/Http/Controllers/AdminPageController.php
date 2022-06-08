@@ -119,6 +119,6 @@ class AdminPageController extends Controller
             'closing' => $request->closing,
         ];
         Notification::send($data,new SendEmailNotification($details));
-        return redirect()->back();
+        return redirect()->back()->with('message','The Email is Sent Successfuly!');
     }
 }

@@ -24,7 +24,6 @@ class HomePageController extends Controller
                 ->groupBy('doctor')
                 ->orderBy('doctor_size', 'DESC')
                 ->get();
-                
                 $data_doctor = doctor::select(
                     'specialization',
                     doctor::raw('COUNT(id) AS specialization_size')

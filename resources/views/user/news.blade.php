@@ -42,9 +42,9 @@
               <div class="site-info">
                 <div class="avatar mr-2">
                   <div class="avatar-img">
-                    <img src="../assets/img/person/person_1.jpg" alt="">
+                    <img src="../assets/img/person/person_2.jpg" alt="">
                   </div>
-                  <span>Roger Adams</span>
+                  <span>John Doe</span>
                 </div>
                 <span class="mai-time"></span> 4 weeks ago
               </div>
@@ -66,7 +66,7 @@
               <div class="site-info">
                 <div class="avatar mr-2">
                   <div class="avatar-img">
-                    <img src="../assets/img/person/person_2.jpg" alt="">
+                    <img src="../assets/img/person/person_3.jpg" alt="">
                   </div>
                   <span>Diego Simmons</span>
                 </div>

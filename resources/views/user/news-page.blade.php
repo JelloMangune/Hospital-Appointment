@@ -115,10 +115,10 @@
 
   <div class="page-section">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
+      <div class="row justify-content-center">
+        <div class="col-lg-10">
           <div class="row">
-            <div class="col-sm-6 py-3">
+            <div class="col-sm-6 col-lg-4 py-3">
               <div class="card-blog">
                 <div class="header">
                   <div class="post-category">
@@ -143,7 +143,7 @@
               </div>
             </div>
 
-            <div class="col-sm-6 py-3">
+            <div class="col-sm-6 col-lg-4 py-3">
               <div class="card-blog">
                 <div class="header">
                   <div class="post-category">
@@ -158,9 +158,9 @@
                   <div class="site-info">
                     <div class="avatar mr-2">
                       <div class="avatar-img">
-                        <img src="../assets/img/person/person_4.jpg" alt="">
+                        <img src="../assets/img/person/person_3.jpg" alt="">
                       </div>
-                      <span>Wizdom Jack</span>
+                      <span>Diego Simmons</span>
                     </div>
                     <span class="mai-time"></span> 2 weeks ago
                   </div>
@@ -170,7 +170,7 @@
 
             
             
-            <div class="col-sm-12 py-5">
+            <div class="col-sm-6 col-lg-4 py-3">
               <div class="card-blog">
                 <div class="header">
                   <div class="post-category">
@@ -181,19 +181,20 @@
                   </a>
                 </div>
                 <div class="body">
-                  <h5 class="post-title">The Recovery Room: News beyond the pandemic</h5>
+                  <h5 class="post-title">The Recovery Room: News in the pandemic</h5>
                   <div class="site-info">
                     <div class="avatar mr-2">
                       <div class="avatar-img">
-                        <img src="../assets/img/person/person_1.jpg" alt="">
+                        <img src="../assets/img/person/person_2.jpg" alt="">
                       </div>
-                      <span>Roger Adams</span>
+                      <span>John Doe</span>
                     </div>
                     <span class="mai-time"></span> 1 month ago
                   </div>
                 </div>
               </div>
             </div>   
+</div>
 
 <script src="../assets/js/jquery-3.5.1.min.js"></script>
 
