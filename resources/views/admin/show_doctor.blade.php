@@ -14,7 +14,7 @@
       <div class="main-panel">
       <div class="container"><h1 style="Font-size:30px;margin-top:20px;">ALL DOCTORS</h1></div>
       <div class="container" align="center" style="padding:20px;border-width:2px;margin-top:10px;border-style:solid;border-color:black;border-radius:10px;">
-          <table class="display" id="pets-table">
+          <table class="display" id="doctor-table">
             <thead>
               <tr>
                 <th>Doctor Name</th>
@@ -53,7 +53,7 @@
     </div>
     <script>
             $(document).ready( function () {
-                 $('#pets-table').DataTable();
+                 $('#doctor-table').DataTable();
             } );
         </script>
   </body>

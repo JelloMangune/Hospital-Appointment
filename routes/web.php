@@ -47,3 +47,4 @@ Route::post('/send-email/{id}',[AdminPageController::class,'sendEmail']);
 Route::get('/about-us', [HomePageController::class,'aboutUs']);
 Route::get('/doctor-page', [HomePageController::class,'doctorPage']);
 Route::get('/news-page', [HomePageController::class,'newsPage']);
+Route::get('/show-user', [AdminPageController::class,'showUser']);

@@ -35,5 +35,12 @@
                 <i class="icon-book-open menu-icon"></i>
               </a>
             </li>
+            <li class="nav-item nav-category"><span class="nav-link"><span style="color:#007BFF;">Users</span></span></li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url('show-user')}}">
+                <span class="menu-title"><b>View Users</b></span>
+                <i class="icon-book-open menu-icon"></i>
+              </a>
+            </li>
           </ul>
         </nav>

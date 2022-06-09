@@ -5,6 +5,7 @@ use App\Models\Doctor;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Models\Appointment;
+use App\Models\User;
 use Notification;
 use App\Notifications\SendEmailNotification;
 
@@ -120,5 +121,11 @@ class AdminPageController extends Controller
         ];
         Notification::send($data,new SendEmailNotification($details));
         return redirect()->back()->with('message','The Email is Sent Successfuly!');
+    }
+    public function showUser(){
+        $data=user::orderBy("id")->get();
+        $data2=appointment::all();
+        $count=0;
+        return view('admin.show_user', compact('data','data2','count'));
     }
 }

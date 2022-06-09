@@ -13,36 +13,36 @@
       @include('admin.sidebar')
       <div class="main-panel">
       <div class="container"><h1 style="Font-size:30px;margin-top:20px;">APPPOINTMENT LIST</h1></div>
-      <div class="container" align="center" style="padding:1px;border-width:2px;margin-top:10px;border-style:solid;border-color:black;border-radius:10px;">
+      <div class="container" align="center" style="padding:20px;border-width:2px;margin-top:5px;border-style:solid;border-color:black;border-radius:10px;">
                 <table class="display" id="pets-table">
                 <thead>
                     <tr>
-                      <th style="font-size:12px;">Customer Name</th>
-                      <th style="font-size:12px;">Email</th>
-                      <th style="font-size:12px;">Phone</th>
-                      <th style="font-size:12px;">Doctor</th>
-                      <th style="font-size:12px;">Date</th>
-                      <th style="font-size:12px;">Message</th>
-                      <th style="font-size:12px;">Status</th>
-                      <th style="font-size:12px;">Approve</th>
-                      <th style="font-size:12px;">Cancel</th>
-                      <th style="font-size:12px;">Send Email</th>
-                      <th style="font-size:12px;">Completed</th>
-                      <th style="font-size:12px;">Delete</th>
+                      <th style="font-size:11px;">Customer Name</th>
+                      <th style="font-size:11px;">Email</th>
+                      <th style="font-size:11px;">Phone</th>
+                      <th style="font-size:11px;">Doctor</th>
+                      <th style="font-size:11px;">Date</th>
+                      <th style="font-size:11px;">Message</th>
+                      <th style="font-size:11px;">Status</th>
+                      <th style="font-size:11px;">Approve</th>
+                      <th style="font-size:11px;">Cancel</th>
+                      <th style="font-size:11px;">Send Email</th>
+                      <th style="font-size:11px;">Completed</th>
+                      <th style="font-size:11px;">Delete</th>
                     </tr>
                 </thead>
                 <tbody>
                 @foreach($data as $appoint)
                     <tr>
-                      <td style="font-size:12px;">{{$appoint->name}}</td>
-                      <td style="font-size:12px;">{{$appoint->email}}</td>
-                      <td style="font-size:12px;">{{$appoint->number}}</td>
-                      <td style="font-size:12px;">{{$appoint->doctor}}</td>
-                      <td style="font-size:12px;">{{$appoint->date}}</td>
-                      <td style="font-size:12px;">{{$appoint->message}}</td>
-                      <td style="font-size:12px;"><b><u>{{$appoint->status}}</b></u></td>
+                      <td style="font-size:11px;">{{$appoint->name}}</td>
+                      <td style="font-size:11px;">{{$appoint->email}}</td>
+                      <td style="font-size:11px;">{{$appoint->number}}</td>
+                      <td style="font-size:11px;">{{$appoint->doctor}}</td>
+                      <td style="font-size:11px;">{{$appoint->date}}</td>
+                      <td style="font-size:11px;">{{$appoint->message}}</td>
+                      <td style="font-size:11px;"><b><u>{{$appoint->status}}</b></u></td>
                       @if ($appoint->status=="Completed")
-                          <td style="font-size:12px;">
+                          <td style="font-size:11px;">
                             <a class="btn btn-secondary btn-sm" href="{{url('approve',$appoint->id)}}" style="pointer-events:none;font-size:13px;">Approve</a>
                         </td>
                         <td>
@@ -59,11 +59,11 @@
                         </td>
                       @else
                         @if ($appoint->status=="Approved")
-                        <td style="font-size:12px;">
+                        <td style="font-size:11px;">
                             <a class="btn btn-secondary btn-sm" href="{{url('approve',$appoint->id)}}" style="pointer-events:none;font-size:13px;">Approve</a>
                         </td>
                         @else
-                        <td style="font-size:12px;">
+                        <td style="font-size:11px;">
                             <a class="btn btn-success btn-sm" href="{{url('approve',$appoint->id)}}" style="font-size:13px;">Approve</a>
                         </td>
                         @endif

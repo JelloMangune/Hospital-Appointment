@@ -14,7 +14,8 @@ class HomePageController extends Controller
         if(Auth::id()){
             if(Auth::user()->usertype=='0'){
                 $doctor = doctor::all();
-                return view('user.home', compact('doctor'));
+                $user = user::find(Auth::id());
+                return view('user.home', compact('doctor','user'));
             }
             else{
                 $data = appointment::select(
@@ -24,6 +25,7 @@ class HomePageController extends Controller
                 ->groupBy('doctor')
                 ->orderBy('doctor_size', 'DESC')
                 ->get();
+                
                 $data_doctor = doctor::select(
                     'specialization',
                     doctor::raw('COUNT(id) AS specialization_size')
