@@ -12,8 +12,8 @@
       <div class="container-fluid page-body-wrapper">
       @include('admin.sidebar')
       <div class="main-panel">
-      <div class="container"><h1 style="Font-size:30px;margin-top:20px;">ALL USERS</h1></div>
-      <div class="container" align="center" style="padding:20px;border-width:2px;margin-top:10px;border-style:solid;border-color:black;border-radius:10px;">
+      <div class="container"><h1 style="Font-size:30px;margin-top:20px;border-style:solid;border-width:3px;border-color:#294552;text-align:center;">ALL USERS</h1></div>
+      <div class="container" align="center" style="padding:10px;margin-top:40px;">
           <table class="display" id="pets-table">
             <thead>
               <tr>
@@ -24,19 +24,18 @@
                 <th>Number of appointments</th>
               </tr>
             </thead>
-
             <tbody>
             @foreach($data as $user)
             @if ($user->usertype == 0)
               <tr>
-                {{$count=0}}
+                <input type="hidden" id="custId" name="custId" value="{{$count=0}}"> 
                 <td>{{$user->name}}</td>
                 <td>{{$user->email}}</td>
                 <td>{{$user->phone}}</td>
                 <td>{{$user->address}}</td>
                 @foreach($data2 as $appointment)
                     @if($user->id == $appointment->user_id)
-                        {{$count+=1}}                   
+                    <input type="hidden" id="custId" name="custId" value="{{$count+=1}}">         
                     @endif
                 @endforeach
                 <td>{{$count}}</td>

@@ -12,8 +12,8 @@
       <div class="container-fluid page-body-wrapper">
       @include('admin.sidebar')
       <div class="main-panel">
-      <div class="container"><h1 style="Font-size:30px;margin-top:20px;">ALL DOCTORS</h1></div>
-      <div class="container" align="center" style="padding:20px;border-width:2px;margin-top:10px;border-style:solid;border-color:black;border-radius:10px;">
+      <div class="container"><h1 style="Font-size:30px;margin-top:20px;text-align:center;border-style:solid;border-width:3px;border-color:#294552">ALL DOCTORS</h1></div>
+      <div class="container" align="center" style="padding-top:5px;margin-top:50px;">
           <table class="display" id="doctor-table">
             <thead>
               <tr>
@@ -39,10 +39,10 @@
                 <td>{{$doctor->room}}</td>
                 <td><img height=100 width=100 src="doctor_images/{{$doctor->image}}"></td>
                 <td>
-                    <a class="btn btn-success" href="{{url('update-doctor',$doctor->id)}}">Update</a>
+                    <a class="btn btn-success btn-sm" href="{{url('update-doctor',$doctor->id)}}">Update</a>
                 </td>
                 <td>
-                    <a class="btn btn-danger" href="{{url('delete-doctor', $doctor->id)}}" 
+                    <a class="btn btn-danger btn-sm" href="{{url('delete-doctor', $doctor->id)}}" 
                     onclick="return confirm('Are you sure you want to delete Doctor {{$doctor->name}}&#8217;s data?')">Delete</a>
                 </td>
               </tr>

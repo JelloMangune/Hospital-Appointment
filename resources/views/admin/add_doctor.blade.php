@@ -89,7 +89,7 @@
             </div>
             <div style="padding:15px;">
                 <label style="display:inline-block;width:200px;">Image</label>
-                <input type="file" name="file">
+                <input type="file" name="file" required>
             </div>
             <div style="padding:15px; color:black;">
                 <input type="submit" class="btn btn-primary" style="background-color:#007BFF;">

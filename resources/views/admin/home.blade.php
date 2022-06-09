@@ -19,6 +19,7 @@
       var options = {
         title: 'Number of Appointments',
         is3D: true,
+        pieSliceText: 'label',
         chartArea:{left:120,top:120,bottom:20,right:20},
         titleTextStyle:{align:'center'},
       };
@@ -69,6 +70,7 @@
           var options = {
             title: 'Appointment Status',
             is3D: true,
+            pieSliceText: 'label',
             chartArea:{left:120,top:120,bottom:20,right:20},
             titleTextStyle:{align:'center'},
           };

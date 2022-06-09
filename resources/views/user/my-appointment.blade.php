@@ -128,7 +128,7 @@
                         <td>
                           @if($appoints->status=="Approved")
                           <a class="btn btn-accent" style="pointer-events:none;color:white;background-color:#597884">Cancel</a>
-                          @elseif ($appoints->status=="Completed")
+                          @elseif ($appoints->status=="Completed" || $appoints->status=="Canceled")
                           <a class="btn btn-danger" href="{{url('cancel-appoint',$appoints->id)}}" 
                           onclick="return confirm('Are you sure you want to delete your appointment request with {{$appoints->doctor}} on {{$appoints->date}}')">
                           Delete</a>
